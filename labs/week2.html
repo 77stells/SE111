@@ -1,0 +1,81 @@
+<doctype html>
+<html lang="en">
+    <head>
+        <title>Week 2 Labs</title>
+        <meta charset="UTF-8">
+        <!--basically if u do this no need for external css file-->
+        <style>
+        body{
+                background-color: aquamarine;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+        }
+        #main{
+            border:1px solid black;
+            width: 750px;
+        }
+
+        h1{
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+        h2{
+            padding: 10px;
+
+        }
+
+        li{
+            display:inline
+        }
+
+        a:link{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: white;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+        </style>
+        <!--"a:" basically an is statement-->
+
+        <script>
+            var message = prompt("who u");
+            alert(message + "boo u suck");
+            document.getElementById("Welcome-message").innerHTML = `welcome ${message}`;
+            document.getElementById("footer").style.color = "red";
+        </script>
+    </head>
+<!-- footer thing might not work cuz it doesnt know what it is that early in code-->
+    <body>
+        <div id="main">
+            <h1>Welcome to week 2 lab</h1>
+            <h2>This covers URL, URI, Attributes, additional HTML, some javascript and css</h2>
+            <ul>
+                <li><a href="..\labs\lab1.html">link to lab 1</a></li> <!--u need "../" here to make it work idk y-->
+
+                <!--this is how u link outside ur server-->
+                <li><a href="https://www.youtube.com">link to youtube idk</a></li> <!--shift alt down to dupe lines-->
+
+                <div>
+                    <!-- this is embed code u can copy on yt-->
+                    <iframe width="672" height="378" src="https://www.youtube.com/embed/UnIhRpIT7nc" title="稲葉曇『ラグトレイン』Vo. 歌愛ユキ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--iframe basically puts a webpage inside a webpage-->
+
+                    <div id="footer">
+                        <p>
+                            &copy; 2025/html/javascript class
+                        </p>
+                        <!--literally a copyright logo idk why u would ever need this if ur not a web dev-->
+
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </body>
+</html>
