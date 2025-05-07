@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wage Calculator</title>
+</head>
+<body>
+  <h2>Wage Calculator</h2>
+  <script>
+ // get user input
+var hourlyPay = Number(prompt("Enter your hourly pay:"));
+var hoursPerWeek = Number(prompt("Enter hours worked per week:"));
+var weeksWorked = Number(prompt("Enter number of weeks worked:"));
+
+// error protection
+if (isNaN(hourlyPay) || isNaN(hoursPerWeek) || isNaN(weeksWorked)) {
+  alert("Invalid input. Please enter numeric values.");
+} else {
+  // pay calculation
+  var grossIncome = hourlyPay * hoursPerWeek * weeksWorked;
+  var tax = grossIncome * 0.20;
+  var netIncome = grossIncome - tax;
+
+  // log info to console
+  console.log("Gross Income: $" + grossIncome);
+  console.log("Tax (20%): $" + tax);
+  console.log("Net Income: $" + netIncome);
+
+  // display results using an alert
+  alert(
+    `Calculation complete:\nGross Income: $${grossIncome}\n` +
+    `Tax (20%): $${tax}\nNet Income: $${netIncome}`
+  );
+}
+  </script>
+</body>
+</html>
