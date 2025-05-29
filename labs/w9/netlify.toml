@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/week9-1.html"
+status = 200
